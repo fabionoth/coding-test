@@ -55,10 +55,19 @@ pip install -r requirements.txt
 - The application fetches weather data for the following cities by default: London, New York, Tokyo, São Paulo, and Johannesburg. You can modify the `CITIES` list in `main.py` to include other cities.
 
 
-## GET started 
+## Getting Started
 
+Build the Docker image:
 
 ```bash
-sudo docker build -t weather-app .
-docker run --env-file .env  weather-app --json --csv
+docker build -t weather-app .
 ```
+
+Run the application (from the directory containing your `.env` file):
+
+```bash
+docker run --env-file .env weather-app --json --csv
+```
+
+- The `--json` and `--csv` flags will print the output to the console.
+- Output files (`weather_data.csv` and `weather_data.json`) will be saved in the `output/` directory on your host machine.
