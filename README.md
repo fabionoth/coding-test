@@ -53,3 +53,12 @@ pip install -r requirements.txt
 
 - Ensure your `.env` file is not committed to version control. It is already included in `.gitignore`.
 - The application fetches weather data for the following cities by default: London, New York, Tokyo, São Paulo, and Johannesburg. You can modify the `CITIES` list in `main.py` to include other cities.
+
+
+## GET started 
+
+
+```bash
+sudo docker build -t weather-app .
+docker run --env-file .env  weather-app --json --csv
+```
